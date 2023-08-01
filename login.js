@@ -7,26 +7,23 @@ function cadastrar() {
     alert('prencha todos os campos')
     return
   }
-  var usuario = {
-    nome: nome,
-    email: email,
-    senha: senha
-  }
+
   alert('Usuário cadastrado com sucesso!')
   alert(nome)
 }
 
 function logar() {
+  const erro = document.querySelector('#erro')
   var login = document.getElementById('login').value
   var senha = document.getElementById('senha').value
   if (login == '' || senha == '') {
-    alert('por favor prenchar todos os campos para logar')
+    erro.textContent = 'erro prencha todos os campos'
   } else {
-    if (login == nome && senha == senha) {
+    if (login == 'admin' && senha == 123) {
       alert('senha correta')
       location.href = 'home.html'
     } else {
-      alert('senha incorreta tenta novamente')
+      erro.textContent = 'erro senha e usuario invalido'
     }
   }
 }

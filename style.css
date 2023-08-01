@@ -4,6 +4,10 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(teste.jpg);
+  /*background-repeat: no-repeat;*/
+  /*background-size: contain;*/
+  background-position: top center;
+
 }
 .tela-login{
 background-color: rgba(0, 0, 0, 0.9);
